@@ -12,4 +12,4 @@ This is a collection of practices applied to cloud-native development, microserv
 This is not a thorouh or step by step document, this does not cover the respective topics in deep detail nor is precise or clinical.
 
 # Why
-Microservices development and orchestration have a broad set of practices and documentation, summarizing them can help on introducing the ideas and later develop a deeper knowledge through practice and references consultation.
+Microservices development and orchestration have a broad set of practices and extensive documentation, summarizing them can help on introducing the ideas and later develop a deeper knowledge through practice and references consultation.
