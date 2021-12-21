@@ -1,4 +1,4 @@
-title: Kim's Practices
+title: Cloud-native Practices
 email: 3zy4v335atyu+ghp@pm.me
 description: >-
   Set of practices and recommendations aquired from experience and self-development.
@@ -6,7 +6,7 @@ baseurl: "/"
 url: "https://joaquinfll.github.io"
 github_username:  joaquinfll
 
-theme: minima
+theme: just-the-docs
 
 plugins:
   - jekyll-feed
