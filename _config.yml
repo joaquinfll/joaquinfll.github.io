@@ -6,7 +6,7 @@ baseurl: "/"
 url: "https://joaquinfll.github.io"
 github_username:  joaquinfll
 
-theme: just-the-docs
+remote_theme: pmarsceill/just-the-docs
 
 plugins:
   - jekyll-feed
