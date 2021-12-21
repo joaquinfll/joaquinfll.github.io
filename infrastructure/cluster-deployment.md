@@ -5,6 +5,9 @@ parent: Infrastructure
 nav_order: 2
 ---
 
+# Who
+The audience for this practice is systems architect, SREs and operations.
+
 # What
 Deployment of a cluster is the practice of creating the infrastructure and other configuration items required for getting a cluster up and running.
 
