@@ -14,6 +14,10 @@ References and sources of inspiration that helped to build this body of knowledg
 
 [Twelve-factor App](https://12factor.net/)
 
+[MegaLinter](https://megalinter.github.io/latest/)
+
+[Trivy](https://aquasecurity.github.io/trivy)
+
 [Semantic Versioning](https://semver.org/)
 
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
