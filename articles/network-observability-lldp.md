@@ -2,17 +2,21 @@
 
 ## What is `LLDP`?
 
+Is a link layer protocol used by network devices for advertising their identity, capabilities, and neighbors.
+
 ## What information provides?
+
+
 
 ## How to enable it in `OpenShift`?
 
-There are different capacities and to enable LLDP in OpenShift.
+There are different capacities to enable LLDP in OpenShift.
 
 ### Reception only with `NMState`
 You can enable `LLDP` with `NMState` to receive information being published by external network devices, this is presented in the OpenShift API, CLI and WebUI.
 
 - Install nmstate-operator
-- Deploy an nmstate-operator
+- Deploy an nmstate-operator instance
 - Apply a dynamic `NodeNetworkConfigurationPolicy`
 
 ```
@@ -36,13 +40,14 @@ Running an additional `lldpd` or `lldpad` daemon in each node of the cluster ena
 To run the daemon there are different approaches
 - As a DaemonSet
   - this limits to running the service once the cluster is deployed and only covers day-2 operations
-- As a service deployed from an RPM in a RedHat CoreOS layer
+- As a service deployed from an RPM with a Red Hat CoreOS layer
   - this increases complexity creating an additional build step when using out-of-cluster layer build and managing cluster updates.
 - As a containerized service deployed as a MachineConfig
   - this allows for applying the configuration as day-1 and day-2 if generated as an ignition file, helping with troubleshooting when deploying new clusters
 
 #### Container build
 
+Containerfile
 ```
 FROM registry.access.com/ubi9/ubi:latest
 
@@ -85,10 +90,16 @@ storage:
 
 #### Transpiling Butane 
 
+Transpiling to Ignition
 - podman run --interactive -rm quay.io/coreos/butane:release --pretty --strict -r < lldpd-service.bu > lldpd-service-ignition.ign
+
+Transpiling to MachineConfig
 - podman run --interactive -rm quay.io/coreos/butane:release --pretty --strict < lldpd-service.bu > lldpd-service-machineconfig.yaml
+
+#### Merging LLDP service Ignition in RHCOS ISO
 
 ## References
 
+https://en.wikipedia.org/wiki/Link_Layer_Discovery_Protocol
 https://docs.redhat.com/en/documentation/openshift_container_platform/4.19/html-single/kubernetes_nmstate/index#virt-example-enabling-lldp-policy_k8s-nmstate-updating-node-network-config
 https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html
